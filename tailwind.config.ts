@@ -16,6 +16,9 @@ const config: Config = {
         greyLine: "#13171D",
         greyText: "#46505F",
       },
+      backgroundImage: {
+        linear: "linear-gradient(90deg, #3D8BFF 0%, #AB23FF 100%)",
+      },
     },
   },
   plugins: [],
