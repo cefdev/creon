@@ -40,3 +40,9 @@
 .font-satoshi-bold {
   font-family: "SatoshiBold", sans-serif;
 }
+
+@layer utilities {
+  .animate {
+    @apply transition-all duration-500;
+  }
+}

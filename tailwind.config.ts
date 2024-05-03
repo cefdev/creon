@@ -13,8 +13,8 @@ const config: Config = {
         white: "#FFFFFF",
         purple: "#AB23FF",
         blue: "#3D8BFF",
-        greyLine: "#13171D",
-        greyText: "#46505F",
+        "grey-line": "#13171D",
+        "grey-text": "#46505F",
       },
       backgroundImage: {
         linear: "linear-gradient(90deg, #3D8BFF 0%, #AB23FF 100%)",

@@ -1,0 +1,130 @@
+"use client";
+
+import { Button } from "@/components/button";
+import { cn } from "@/lib/utils";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+
+interface NavbarItem {
+  title: string;
+  href: string;
+  active: boolean;
+}
+
+interface SocialMediaItem {
+  title: string;
+  iconPath: string;
+  href: string;
+}
+
+interface Props {
+  navbarData: NavbarItem[];
+  socialMediaData: SocialMediaItem[];
+}
+
+export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <header className="fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between">
+      <Link href="/" title="Creon" aria-label="Creon">
+        <Image
+          src="/images/creon-logo.png"
+          alt="Creon logo"
+          height={33}
+          width={120}
+        />
+      </Link>
+      <Button
+        variant="transparent"
+        onClick={() => setIsOpen(true)}
+        className="lg:hidden"
+        title="Open navbar"
+      >
+        <Image
+          src="/images/open.svg"
+          alt="Open navbar"
+          height={24}
+          width={24}
+        />
+      </Button>
+      <nav
+        className={cn(
+          "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-screen max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px]",
+          "flex lg:flex-row-reverse lg:gap-[58px] lg:items-center",
+          isOpen ? "right-0" : "-right-full"
+        )}
+      >
+        <div className="max-lg:pt-5 max-lg:pr-[15px] max-lg:pb-[30px] flex items-center justify-between">
+          <Button variant="outline" asChild>
+            <Link href="#" title="connect" aria-label="connect">
+              Connect
+            </Link>
+          </Button>
+          <Button
+            variant="blue"
+            onClick={() => setIsOpen(false)}
+            className="lg:hidden"
+            title="CLose navbar"
+          >
+            <Image
+              src="/images/close.svg"
+              alt="CLose navbar"
+              height={12}
+              width={12}
+            />
+          </Button>
+        </div>
+        <ul className="max-lg:border-t max-lg:border-grey-line lg:flex lg:gap-10">
+          {navbarData.map((item, i) => {
+            return (
+              <li
+                className="max-lg:pt-[15px] max-lg:pb-[18px] max-lg:border-b max-lg:border-grey-line font-satoshi-bold"
+                key={i}
+              >
+                {item.active ? (
+                  <Link
+                    href={item.href}
+                    title={item.title}
+                    aria-label={item.title}
+                    className="animate hover:text-blue"
+                  >
+                    {item.title}
+                  </Link>
+                ) : (
+                  <p className="w-fit relative flex">
+                    {item.title}
+                    <span className="text-purple uppercase text-[10px] px-1 py-[2px] bg-black rounded-full block mb-1 lg:mb-[6px] ml-1">
+                      Soon
+                    </span>
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+        <div className="flex flex-wrap gap-[10px] mt-auto lg:hidden">
+          {socialMediaData.map((item, i) => {
+            return (
+              <Link
+                href={item.href}
+                title={`Follow us on ${item.title}`}
+                aria-label={`Follow us on ${item.title}`}
+                key={i}
+                className="border-[2px] border-white rounded-full flex items-center justify-center p-[9px] animate hover:border-blue hover:bg-blue"
+              >
+                <Image
+                  src={`/images/${item.iconPath}`}
+                  alt={item.title}
+                  width={16}
+                  height={16}
+                />
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </header>
+  );
+};
