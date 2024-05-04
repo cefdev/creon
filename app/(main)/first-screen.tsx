@@ -15,7 +15,7 @@ export const FirstScreen = () => {
         <h1 className="font-monument uppercase text-[32px] leading-[1.1] mb-[15px] lg:mb-10 xxl:text-[68px]">
           The world's first platform for Tokenizing AI blockchain projects
         </h1>
-        <p className="w-fit font-satoshi-bold text-lg leading-[1.3] text-gradient py-2 border-t border-b border-gradient">
+        <p className="w-fit font-satoshi-bold text-lg leading-[1.3] text-gradient py-2 border-t border-b border-gradient lg:text-[22px] lg:text-nowrap">
           Hold the Creon Pass NFT and earn passive income from AI Tools
         </p>
       </div>

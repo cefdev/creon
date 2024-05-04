@@ -26,6 +26,9 @@ const config: Config = {
       backgroundImage: {
         linearDark: "linear-gradient(0deg, #000 0%, #3D8BFF 47%, #AB23FF 99%)",
       },
+      boxShadow: {
+        inner: "inset 0 0 30px 30px #000",
+      },
     },
   },
   plugins: [],
