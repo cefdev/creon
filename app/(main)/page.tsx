@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <FirstScreen />
-      <div className="max-w-[1440px] mx-4 lg:mx-[22px] xl:mx-auto">
+      <div className="max-w-[1480px] px-4 lg:px-5 xl:mx-auto">
         <CreonPass />
       </div>
     </>

@@ -14,7 +14,7 @@ interface Props {
 export const Footer: React.FC<Props> = ({ socialMediaData }) => {
   return (
     <footer>
-      <div className="flex flex-col lg:flex-row items-center gap-4 text-sm lg:text-base p-5 lg:px-[50px] lg:pt-[15px] lg:pb-[35px] lg:max-w-[1440px] lg:mx-auto lg:gap-[90px] xl:px-0">
+      <div className="flex flex-col lg:flex-row items-center gap-4 text-sm lg:text-base p-5 lg:px-[50px] lg:pt-[15px] lg:pb-[35px] max-w-[1480px] px-4 lg:px-5 xl:mx-auto lg:gap-[90px]">
         <p>© Creon 2023. All rights reserved.</p>
         <div className="flex flex-wrap gap-[10px] mt-auto">
           {socialMediaData.map((item, i) => {
