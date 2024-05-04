@@ -1,3 +1,4 @@
+import { Footer } from "./footer";
 import { Header } from "./header";
 import { navbarItems, socialMediaItems } from "@/data/mockdata";
 
@@ -8,8 +9,8 @@ const MainLayout = ({ children }: Props) => {
   return (
     <>
       <Header navbarData={navbarItems} socialMediaData={socialMediaItems} />
-      <main className="">{children}</main>
-      <footer>This is a footer</footer>
+      <main>{children}</main>
+      <Footer socialMediaData={socialMediaItems} />
     </>
   );
 };
