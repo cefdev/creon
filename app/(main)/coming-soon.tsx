@@ -23,7 +23,7 @@ const Card: React.FC<{ item: ComingSoonCardTypes }> = ({ item }) => {
       <div className="relative mr-5 lg:mr-[30px] rounded-r-lg rounded-b-lg overflow-hidden group">
         <Image
           src={`/images/${item.imagePath}`}
-          width={4203}
+          width={423}
           height={234}
           alt={item.imageAlt}
           className="w-full h-full animate group-hover:scale-[1.15]"
