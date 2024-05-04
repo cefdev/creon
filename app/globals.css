@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Fonts */
 @font-face {
   font-family: "MonumentExtended";
   src: url("../public/fonts/MonumentExtended-Regular.woff2") format("woff2");
@@ -42,11 +43,18 @@
 }
 
 @layer utilities {
+  /* Aniamtion */
   .animate {
     @apply transition-all duration-500;
   }
+
+  /* Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-blue to-purple text-transparent bg-clip-text;
+  }
 }
 
+/* Scroll bar */
 ::-webkit-scrollbar {
   width: 5px;
 }
@@ -57,4 +65,9 @@
 
 ::-webkit-scrollbar-thumb {
   background: #ab23ff;
+}
+
+/* Border custom styling */
+.border-gradient {
+  border-image: linear-gradient(to right, #3d8bff, #ab23ff) 100% 0;
 }

@@ -12,6 +12,7 @@ const config: Config = {
       md: "768px",
       lg: "1024px",
       xl: "1440px",
+      xxl: "1900px",
     },
     extend: {
       colors: {
@@ -23,7 +24,7 @@ const config: Config = {
         "grey-text": "#46505F",
       },
       backgroundImage: {
-        linear: "linear-gradient(90deg, #3D8BFF 0%, #AB23FF 100%)",
+        linearDark: "linear-gradient(0deg, #000 0%, #3D8BFF 47%, #AB23FF 99%)",
       },
     },
   },

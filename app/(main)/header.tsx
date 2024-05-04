@@ -27,7 +27,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between">
+    <header className="fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between z-10">
       <Link href="/" title="Creon" aria-label="Creon">
         <Image
           src="/images/creon-logo.svg"

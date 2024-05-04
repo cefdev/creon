@@ -1,3 +1,9 @@
+import { FirstScreen } from "./first-screen";
+
 export default function Home() {
-  return <div>This is main content</div>;
+  return (
+    <>
+      <FirstScreen />
+    </>
+  );
 }
