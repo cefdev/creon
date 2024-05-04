@@ -30,7 +30,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
     <header className="fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between">
       <Link href="/" title="Creon" aria-label="Creon">
         <Image
-          src="/images/creon-logo.png"
+          src="/images/creon-logo.svg"
           alt="Creon logo"
           height={33}
           width={120}
