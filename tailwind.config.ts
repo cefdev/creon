@@ -24,6 +24,7 @@ const config: Config = {
         "grey-text": "#46505F",
       },
       backgroundImage: {
+        linear: "linear-gradient(0deg, #3D8BFF 0%, #AB23FF 99%)",
         linearDark: "linear-gradient(0deg, #000 0%, #3D8BFF 47%, #AB23FF 99%)",
       },
       boxShadow: {

@@ -1,3 +1,4 @@
+import { ComingSoon } from "./coming-soon";
 import { CreonPass } from "./creon-pass";
 import { FirstScreen } from "./first-screen";
 import { Profiting } from "./profiting";
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="max-w-[1480px] px-4 lg:px-5 xl:mx-auto">
         <CreonPass />
         <Profiting />
+        <ComingSoon />
       </div>
     </>
   );
