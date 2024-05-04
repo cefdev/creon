@@ -7,18 +7,24 @@ export const Profiting = () => {
       <h3 className="font-monument uppercase text-gradient text-xl lg:text-[38px] leading-[1.2] mb-5 lg:mb-[83px] lg:self-end">
         AI Innovation & Decentralization
       </h3>
-      <div className="flex flex-col lg:flex-row gap-5 lg:gap-[71px] lg:items-center">
+      <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 lg:items-stretch">
         <div className="relative">
-          <video autoPlay loop muted poster="/images/creon-logo-poster.png">
+          <video
+            autoPlay
+            loop
+            muted
+            poster="/images/creon-logo-poster.png"
+            className="h-full object-cover"
+          >
             <source src="/videos/creon-logo.mp4" type="video/mp4" />
           </video>
           <div className="absolute left-0 top-0 w-full h-full bg-linearDark mix-blend-soft-light" />
         </div>
-        <div className="xxl:max-w-[391px] xxl:w-full">
+        <div className="xxl:max-w-[391px] xxl:w-full lg:p-[30px] lg:border-l lg:border-r lg:border-grey-line flex flex-col justify-center">
           <h4 className="font-satoshi-bold text-lg lg:text-[22px] leading-[1.3] mb-4 lg:mb-7">
             The dynamic community driven business model of the future.
           </h4>
-          <p className="text-sm lg:text-lg">
+          <p className="text-sm lg:text-lg !leading-[1.3]">
             At Creon, we blend the power of AI tools with the dynamic crypto and
             NFT markets, utilizing an innovative business model to drive
             profitability. This approach empowers our community, as our NFT and
