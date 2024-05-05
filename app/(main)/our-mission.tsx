@@ -41,7 +41,9 @@ export const OurMession = () => {
                     height={114}
                     className="w-[50px] lg:w-[100px]"
                   />
-                  <p className="animate group-hover:text-blue">{item.title}</p>
+                  <p className="text-left animate group-hover:text-blue">
+                    {item.title}
+                  </p>
                 </AccordionTrigger>
                 <AccordionContent>{item.description} </AccordionContent>
               </AccordionItem>
