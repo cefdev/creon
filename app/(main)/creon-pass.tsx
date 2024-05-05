@@ -33,7 +33,9 @@ export const CreonPass = () => {
         <p className="text-sm lg:text-lg leading-[1.3] py-3 lg:py-4 px-4 lg:px-[18px] w-fit border border-grey-line mb-10 lg:mb-[72px]">
           Revenue share distribution from Creon built AI projects
         </p>
-        <Button variant="linear">Buy Creon Pass</Button>
+        <Button variant="linear" data-content="Buy Creon Pass">
+          Buy Creon Pass
+        </Button>
       </div>
     </section>
   );

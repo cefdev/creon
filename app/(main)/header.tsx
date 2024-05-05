@@ -105,7 +105,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
         )}
       >
         <div className="max-lg:pt-5 max-lg:pr-[15px] max-lg:pb-[30px] flex items-center justify-between">
-          <Button variant="outline" asChild>
+          <Button variant="outline" asChild data-content="Connect">
             <Link
               href="#"
               title="connect"
