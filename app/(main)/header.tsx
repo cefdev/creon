@@ -85,7 +85,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
       </Button>
       <nav
         className={cn(
-          "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-svh max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px] z-20",
+          "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-dvh max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px] z-20",
           "flex lg:flex-row-reverse lg:gap-[58px] lg:items-center",
           isOpen ? "right-0" : "-right-full"
         )}
