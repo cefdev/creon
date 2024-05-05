@@ -26,6 +26,8 @@ const config: Config = {
       backgroundImage: {
         linear: "linear-gradient(0deg, #3D8BFF 0%, #AB23FF 99%)",
         linearDark: "linear-gradient(0deg, #000 0%, #3D8BFF 47%, #AB23FF 99%)",
+        linearShadow:
+          "linear-gradient(to bottom, black 0%, transparent 50%, black 100%)",
       },
       boxShadow: {
         inner: "inset 0 0 30px 30px #000",

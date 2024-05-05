@@ -2,6 +2,7 @@ import { ComingSoon } from "./coming-soon";
 import { CreonPass } from "./creon-pass";
 import { FirstScreen } from "./first-screen";
 import { Profiting } from "./profiting";
+import { Roadmap } from "./roadmap";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
         <Profiting />
         <ComingSoon />
       </div>
+      <Roadmap />
     </>
   );
 }
