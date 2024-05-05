@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: "Creon",
   description:
     "The world's first platform for Tokenizing AI blockchain projects",
+  icons: {
+    icon: "/images/favicon.png",
+  },
 };
 
 export default function RootLayout({
