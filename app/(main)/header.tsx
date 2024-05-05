@@ -4,7 +4,7 @@ import { Button } from "@/components/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface NavbarItem {
   title: string;
@@ -26,9 +26,43 @@ interface Props {
 export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
   const [isOpen, setIsOpen] = useState(false);
 
+  const [scrollY, setScrollY] = useState(0);
+  const [headerStyle, setHeaderStyle] = useState({
+    backgroundColor: "transparent",
+  });
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollY(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (scrollY > 200) {
+      setHeaderStyle({ backgroundColor: "#000" });
+    } else {
+      setHeaderStyle({ backgroundColor: "transparent" });
+    }
+  }, [scrollY]);
+
   return (
-    <header className="fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between z-10">
-      <Link href="/" title="Creon" aria-label="Creon">
+    <header
+      className="animate fixed top-0 left-0 h-[78px] lg:h-[104px] w-full px-[15px] lg:px-[50px] py-5 lg:py-[30px] flex items-center justify-between z-10"
+      style={{ ...headerStyle }}
+    >
+      <div
+        className={cn(
+          "bg-[#0D131C]/70 w-full h-full backdrop-blur fixed top-0 left-0 animate lg:hidden",
+          isOpen ? "opacity-1 visible" : "opacity-0 invisible"
+        )}
+      />
+      <Link href="/" title="Creon" aria-label="Creon" className="z-10">
         <Image
           src="/images/creon-logo.svg"
           alt="Creon logo"
@@ -39,7 +73,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
       <Button
         variant="transparent"
         onClick={() => setIsOpen(true)}
-        className="lg:hidden"
+        className="z-10 lg:hidden"
         title="Open navbar"
       >
         <Image
@@ -51,7 +85,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
       </Button>
       <nav
         className={cn(
-          "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-screen max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px]",
+          "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-screen max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px] z-20",
           "flex lg:flex-row-reverse lg:gap-[58px] lg:items-center",
           isOpen ? "right-0" : "-right-full"
         )}
