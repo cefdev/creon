@@ -20,7 +20,7 @@ const Card: React.FC<{ item: ComingSoonCardTypes }> = ({ item }) => {
         </h3>
         <p className="font-satoshi-bold text-gradient">{item.subtitle}</p>
       </div>
-      <div className="relative mr-5 lg:mr-[30px] rounded-r-lg rounded-b-lg overflow-hidden group">
+      <div className="relative mr-5 lg:mr-[30px] rounded-r-lg overflow-hidden group">
         <Image
           src={`/images/${item.imagePath}`}
           width={423}
