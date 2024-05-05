@@ -59,7 +59,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
       <div
         className={cn(
           "bg-[#0D131C]/70 w-full h-full backdrop-blur fixed top-0 left-0 animate lg:hidden",
-          isOpen ? "opacity-1 visible" : "opacity-0 invisible"
+          isOpen ? "opacity-1 visible" : "opacity-0 invisible",
         )}
       />
       <Link href="/" title="Creon" aria-label="Creon" className="z-10">
@@ -87,7 +87,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
         className={cn(
           "max-lg:fixed max-lg:top-0 max-lg:w-[208px] max-lg:h-screen max-lg:bg-black max-lg:animate max-lg:flex-col max-lg:pl-[30px] max-lg:pb-[30px] z-20",
           "flex lg:flex-row-reverse lg:gap-[58px] lg:items-center",
-          isOpen ? "right-0" : "-right-full"
+          isOpen ? "right-0" : "-right-full",
         )}
       >
         <div className="max-lg:pt-5 max-lg:pr-[15px] max-lg:pb-[30px] flex items-center justify-between">
