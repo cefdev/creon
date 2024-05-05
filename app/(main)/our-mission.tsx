@@ -32,7 +32,7 @@ export const OurMession = () => {
         <Accordion type="multiple">
           {accordionData.map((item, i) => {
             return (
-              <AccordionItem value={`item-${i}`}>
+              <AccordionItem value={`item-${i}`} key={i}>
                 <AccordionTrigger className="justify-start gap-4 lg:gap-[30px]">
                   <Image
                     src={`/images/${item.imagePath}`}
