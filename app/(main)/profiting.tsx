@@ -8,7 +8,7 @@ export const Profiting = () => {
         AI Innovation & Decentralization
       </h3>
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 lg:items-stretch">
-        <div className="relative">
+        <div className="relative lg:min-w-[50%] lg:w-full">
           <video
             autoPlay
             loop
@@ -20,7 +20,7 @@ export const Profiting = () => {
           </video>
           <div className="absolute left-0 top-0 w-full h-full bg-linearDark mix-blend-soft-light" />
         </div>
-        <div className="xxl:max-w-[391px] xxl:w-full lg:p-[30px] lg:border-l lg:border-r lg:border-grey-line flex flex-col justify-center">
+        <div className="xl:max-w-[391px] xl:w-full lg:p-[30px] lg:border-l lg:border-r lg:border-grey-line flex flex-col justify-center">
           <h4 className="font-satoshi-bold text-lg lg:text-[22px] leading-[1.3] mb-4 lg:mb-7">
             The dynamic community driven business model of the future.
           </h4>
