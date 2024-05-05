@@ -43,6 +43,20 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
     };
   }, []);
 
+  // Effect to toggle overflow on body
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add("overflow-y-hidden");
+    } else {
+      document.body.classList.remove("overflow-y-hidden");
+    }
+
+    // Cleanup function to remove the class when the component unmounts
+    return () => {
+      document.body.classList.remove("overflow-y-hidden");
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     if (scrollY > 200) {
       setHeaderStyle({ backgroundColor: "#000" });
@@ -92,7 +106,12 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
       >
         <div className="max-lg:pt-5 max-lg:pr-[15px] max-lg:pb-[30px] flex items-center justify-between">
           <Button variant="outline" asChild>
-            <Link href="#" title="connect" aria-label="connect">
+            <Link
+              href="#"
+              title="connect"
+              aria-label="connect"
+              onClick={() => setIsOpen(false)}
+            >
               Connect
             </Link>
           </Button>
@@ -123,6 +142,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
                     title={item.title}
                     aria-label={item.title}
                     className="animate hover:text-blue"
+                    onClick={() => setIsOpen(false)}
                   >
                     {item.title}
                   </Link>
@@ -148,6 +168,7 @@ export const Header: React.FC<Props> = ({ navbarData, socialMediaData }) => {
                 key={i}
                 target="_blank"
                 className="border-[2px] border-white rounded-full flex items-center justify-center p-[9px] animate hover:border-blue hover:bg-blue"
+                onClick={() => setIsOpen(false)}
               >
                 <Image
                   src={`/images/${item.iconPath}`}
