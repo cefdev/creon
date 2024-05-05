@@ -2,7 +2,10 @@ import { Button } from "@/components/button";
 
 export const CreonPass = () => {
   return (
-    <section className="flex flex-col gap-5 pb-[58px] lg:py-20 lg:flex-row-reverse lg:items-center lg:gap-10">
+    <section
+      className="flex flex-col gap-5 pb-[58px] lg:py-20 lg:flex-row-reverse lg:items-center lg:gap-10"
+      id="creon-pass"
+    >
       <div className="relative lg:flex-1">
         <video autoPlay loop muted poster="/images/creon-pass-poster.png">
           <source src="/videos/nft-video.mp4" type="video/mp4" />

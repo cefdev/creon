@@ -29,7 +29,7 @@ export interface RoadmapTypes {
 export const navbarItems: NavbarItem[] = [
   {
     title: "Creon Pass",
-    href: "#",
+    href: "#creon-pass",
     active: true,
   },
   {
