@@ -53,17 +53,17 @@ export const socialMediaItems: SocialMediaItem[] = [
   {
     title: "Telegram",
     iconPath: "telegram.svg",
-    href: "#",
+    href: "https://t.me/Niftables",
   },
   {
     title: "Discord",
     iconPath: "discord.svg",
-    href: "#",
+    href: "https://discord.com/invite/niftables",
   },
   {
     title: "Twitter",
     iconPath: "twitter.svg",
-    href: "#",
+    href: "https://twitter.com/niftables",
   },
 ];
 

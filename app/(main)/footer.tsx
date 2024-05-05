@@ -23,6 +23,7 @@ export const Footer: React.FC<Props> = ({ socialMediaData }) => {
                 href={item.href}
                 title={`Follow us on ${item.title}`}
                 aria-label={`Follow us on ${item.title}`}
+                target="_blank"
                 key={i}
                 className="border-[2px] border-white rounded-full flex items-center justify-center p-[9px] animate hover:border-blue hover:bg-blue"
               >
@@ -36,21 +37,16 @@ export const Footer: React.FC<Props> = ({ socialMediaData }) => {
             );
           })}
         </div>
-        <p className="flex items-center gap-[5px] lg:ml-auto">
+        <p className="flex items-baseline gap-[5px] lg:ml-auto">
           Powered by
           <Link
-            href=""
+            href="https://www.niftables.com/"
             target="_blank"
             title="Niftables"
             aria-label="Niftables"
+            className="uppercase font-monument tracking-[2px] animate hover:text-blue"
           >
-            {/* TODO: Add Aniamtion on hover  */}
-            <Image
-              src="/images/niftables-logo.svg"
-              width={101}
-              height={18}
-              alt="niftables logo"
-            />
+            Niftables
           </Link>
         </p>
       </div>

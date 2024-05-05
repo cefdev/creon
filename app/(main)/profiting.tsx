@@ -8,7 +8,7 @@ export const Profiting = () => {
         AI Innovation & Decentralization
       </h3>
       <div className="flex flex-col lg:flex-row gap-5 lg:gap-10 lg:items-stretch">
-        <div className="relative lg:min-w-[50%] lg:w-full">
+        <div className="relative overflow-hidden rounded-md lg:min-w-[50%] lg:w-full">
           <video
             autoPlay
             loop
