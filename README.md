@@ -34,6 +34,6 @@ After starting the server, open [http://localhost:3000](http://localhost:3000) i
 
 ## Technologies used in thir project
 
-Framework: NextJS 14 App Directory
-Language: TypeScript
-Styling: Tailwind CSS
+- Framework: NextJS 14 App Directory
+- Language: TypeScript
+- Styling: Tailwind CSS
