@@ -29,7 +29,7 @@ export const OurMession = () => {
         </div>
       </div>
       <div className="lg:flex-1">
-        <Accordion type="multiple">
+        <Accordion type="single" collapsible defaultValue={"item-0"}>
           {accordionData.map((item, i) => {
             return (
               <AccordionItem value={`item-${i}`} key={i}>
