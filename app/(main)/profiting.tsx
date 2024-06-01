@@ -1,7 +1,7 @@
 export const Profiting = () => {
   return (
     <section className="pb-[58px] lg:py-20 flex flex-col">
-      <h2 className="font-monument uppercase text-[32px] leading-[1.1] mb-[15px] lg:mb-5 lg:text-[68px]">
+      <h2 className="font-monument uppercase text-[28px] md:text-[32px] leading-[1.1] mb-[15px] lg:mb-5 lg:text-[38px]">
         Profiting Through
       </h2>
       <h3 className="font-monument uppercase text-gradient text-xl lg:text-[38px] leading-[1.2] mb-5 lg:mb-[83px] lg:self-end">

@@ -14,7 +14,7 @@ export const CreonPass = () => {
         <div className="absolute left-0 top-0 w-full h-full shadow-inner" />
       </div>
       <div className="lg:flex-1">
-        <h2 className="font-monument uppercase text-[32px] leading-[1.1] mb-[15px] lg:mb-5 lg:text-[68px]">
+        <h2 className="font-monument uppercase text-[28px] md:text-[32px] leading-[1.1] mb-[15px] lg:mb-5 lg:text-[38px]">
           creon pass nft
         </h2>
         <p className="w-fit font-satoshi-bold text-lg leading-[1.3] text-gradient mb-5 lg:text-[22px] lg:mb-10">
